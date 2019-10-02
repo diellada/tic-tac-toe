@@ -1,0 +1,12 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build-css": "sass .:."
+  },
+  "devDependencies": {
+    "sass": "^1.23.0"
+  }
+}

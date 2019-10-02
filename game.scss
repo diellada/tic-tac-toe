@@ -1,0 +1,48 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: blanchedalmond;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-left: 25vw;
+  width: 500px;
+  height: 500px;
+}
+
+.grid-box {
+  border: 2px solid black;
+  height: 100%;
+  width: 100%;
+  font-size: 100px;
+  font-weight: 800;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.left {
+  border-left: none;
+}
+
+.right {
+  border-right: none;
+}
+
+.top {
+  border-top: none;
+}
+
+.bottom {
+  border-bottom: none;
+}
+
+button {
+  width: 70px;
+  height: 50px;
+  margin-left: 25vw;
+}
