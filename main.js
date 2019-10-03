@@ -36,11 +36,8 @@ const onBoxClick = (event) => {
 
 const endGame = () => {
   document.getElementById("grid-container").style.backgroundColor = "red";
-  // alert("Game has ended!");
-  for (bex in gridBoxes) {
-    bex.innerHTML = "";
-  }
-  // buttonListener();
+  alert("Game has ended!");
+  location.reload();
 }
 
 const checkWinner = () => {
