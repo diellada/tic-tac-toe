@@ -16,7 +16,7 @@ const onButtonClick = (event) => {
   currentSymbol = event.target.value;
   firstSymbol = event.target.value;
   // console.log(firstSymbol);
-  // Remove symbole select event listener
+  // Remove symbol select event listener
   // playerButtons.forEach( () => {
     // playerButtons.removeEventListener("click", event, false);
   // })
