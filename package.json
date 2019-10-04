@@ -8,5 +8,7 @@
   },
   "devDependencies": {
     "sass": "^1.23.0"
-  }
+  },
+  "repository": "https://github.com/diellada/tic-tac-toe.git",
+  "author": "<diellaagyeman@hotmail.co.uk>"
 }
