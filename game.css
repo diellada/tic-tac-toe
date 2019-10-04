@@ -1,9 +1,8 @@
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background-color: blanchedalmond;
 }
 
@@ -19,11 +18,9 @@ button {
   font-weight: bold;
   font-size: 2rem;
 }
-
 button:first-of-type {
   margin-left: 10%;
 }
-
 button:nth-of-type(2) {
   margin-left: 60%;
 }
@@ -35,12 +32,9 @@ p {
 }
 
 #grid-container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   width: 400px;
   height: 400px;
   margin: 0 10vw;
@@ -71,4 +65,5 @@ p {
 .bottom {
   border-bottom: none;
 }
+
 /*# sourceMappingURL=game.css.map */
