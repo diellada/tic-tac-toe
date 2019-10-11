@@ -1,10 +1,12 @@
-//when button click - the first clicked gridbox value is the value of the button
-//then after that interchanges between two values
 
 const playerButtons = [...document.getElementsByTagName("button")];
 const gridBoxes = [...document.getElementsByClassName("grid-box")];
 let currentSymbol = 'X';
-// let position =0;
+
+const startGame = () => {
+  document.getElementById("start-game").style.display = "none";
+  document.getElementById("grid-container").style.display = "grid";
+}
 
 const buttonListener = (pButton => {
   pButton.addEventListener("click", () => onButtonClick(event));
@@ -13,6 +15,7 @@ const buttonListener = (pButton => {
 playerButtons.forEach(buttonListener);
 
 const onButtonClick = (event) => {
+  startGame();
   currentSymbol = event.target.value;
   firstSymbol = event.target.value;
   // console.log(firstSymbol);
@@ -31,13 +34,16 @@ const onBoxClick = (event) => {
   event.target.innerHTML = currentSymbol;
   checkWinner();
   currentSymbol === "X" ? currentSymbol = "O" : currentSymbol = "X";
-  console.log(currentSymbol);
 }
+
+
 
 const endGame = () => {
   document.getElementById("grid-container").style.backgroundColor = "red";
-  alert("Game has ended!");
-  location.reload();
+  document.getElementById("end-game").style.display = "block";
+  document.getElementById("refresh").addEventListener("click", () => {
+    location.reload();
+  });
 }
 
 const checkWinner = () => {

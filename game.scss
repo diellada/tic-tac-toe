@@ -3,69 +3,109 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(255, 235, 205);
 }
 
 body {
-  padding: 5vh 20vw;
+  background-color: rgb(242, 174, 48);;
+  height: 100vh;
 }
 
-button {
-  width: 70px;
-  height: 50px;
-  outline: none;
-  color: black;
-  font-weight: bold;
-  font-size: 2rem;
-  background-color: whitesmoke;
+#start-game {
+  height: 100vh;
+  background-color: aliceblue;
+  background-image: url(./circles.gif);
+  padding: 20vh 20vw;
 
-  &:first-of-type {
-    margin-left: 10%;
+  button {
+    width: 70px;
+    height: 50px;
+    outline: none;
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: whitesmoke;
+    outline-style: none;
+    margin-top: 10vw;
+    cursor: pointer;
+
+    &:hover {
+      color: red;
+      transform: translateY(5px); 
+    }
+
+    &:first-of-type {
+      margin-left: 20%;
+    }
+
+    &:nth-of-type(2) {
+      margin-left: 40%;
+    }
   }
 
-  &:nth-of-type(2) {
-    margin-left: 60%;
+  p {
+    text-align: center;
+    padding: 4vh 0;
+    color:black;
+    font-size: 5vw;
+    font-weight: bold;
   }
-}
-
-p {
-  text-align: center;
-  padding: 4vh 0;
-  opacity: 0.5;
 }
 
 #grid-container {
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  width: 400px;
-  height: 400px;
-  margin: 0 10vw;
+  width: 45vw;
+  height: 80vh;
+  margin: 0 auto;
+  margin-top: 3vh;
+
+  .grid-box {
+    border: 3px solid grey;
+    height: 100%;
+    width: 100%;
+    font-size: 100px;
+    font-weight: 800;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .left {
+    border-left: none;
+  }
+
+  .right {
+    border-right: none;
+  }
+
+  .top {
+    border-top: none;
+  }
+
+  .bottom {
+    border-bottom: none;
+  }
 }
 
-.grid-box {
-  border: 3px solid rgba(190, 164, 124, 0.788);
-  height: 100%;
-  width: 100%;
-  font-size: 100px;
-  font-weight: 800;
+#end-game {
+  display: none;
   text-align: center;
-  vertical-align: middle;
+  font-size: 5vw;
+  font-weight: bold;
+
+  p {
+    i {
+      cursor: pointer;
+      animation: rotation 2s infinite linear;
+    }
+  }
 }
 
-.left {
-  border-left: none;
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
-
-.right {
-  border-right: none;
-}
-
-.top {
-  border-top: none;
-}
-
-.bottom {
-  border-bottom: none;
-}
-

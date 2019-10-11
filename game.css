@@ -1,47 +1,72 @@
 * {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  background-color: blanchedalmond;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  padding: 5vh 20vw;
+  background-color: #f2ae30;
+  height: 100vh;
 }
 
-button {
+#start-game {
+  height: 100vh;
+  background-color: aliceblue;
+  background-image: url(./circles.gif);
+  padding: 20vh 20vw;
+}
+
+#start-game button {
   width: 70px;
   height: 50px;
   outline: none;
   color: black;
   font-weight: bold;
   font-size: 2rem;
-}
-button:first-of-type {
-  margin-left: 10%;
-}
-button:nth-of-type(2) {
-  margin-left: 60%;
+  background-color: whitesmoke;
+  outline-style: none;
+  margin-top: 10vw;
+  cursor: pointer;
 }
 
-p {
+#start-game button:hover {
+  color: red;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+#start-game button:first-of-type {
+  margin-left: 20%;
+}
+
+#start-game button:nth-of-type(2) {
+  margin-left: 40%;
+}
+
+#start-game p {
   text-align: center;
   padding: 4vh 0;
-  opacity: 0.5;
+  color: black;
+  font-size: 5vw;
+  font-weight: bold;
 }
 
 #grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  width: 400px;
-  height: 400px;
-  margin: 0 10vw;
+  display: none;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  width: 45vw;
+  height: 80vh;
+  margin: 0 auto;
+  margin-top: 3vh;
 }
 
-.grid-box {
-  border: 3px solid rgba(190, 164, 124, 0.788);
+#grid-container .grid-box {
+  border: 3px solid grey;
   height: 100%;
   width: 100%;
   font-size: 100px;
@@ -50,20 +75,54 @@ p {
   vertical-align: middle;
 }
 
-.left {
+#grid-container .left {
   border-left: none;
 }
 
-.right {
+#grid-container .right {
   border-right: none;
 }
 
-.top {
+#grid-container .top {
   border-top: none;
 }
 
-.bottom {
+#grid-container .bottom {
   border-bottom: none;
 }
 
+#end-game {
+  display: none;
+  text-align: center;
+  font-size: 5vw;
+  font-weight: bold;
+}
+
+#end-game p i {
+  cursor: pointer;
+  -webkit-animation: rotation 2s infinite linear;
+          animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
 /*# sourceMappingURL=game.css.map */
